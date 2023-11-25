@@ -1,0 +1,151 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 850px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1099px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* media query for increasing the font size and line height when page is > 1100px wide*/
+
+@media (min-width: 1100px) {
+  .video-info .video-title  {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-info .video-author, 
+  .video-stats {
+    font-size: 14px;
+  }
+
+  .channel-picture .profile-picture {
+    width: 42px;
+    border-radius: 46px;
+  }
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.video-title {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
+
+.channel-tooltip {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 45px;
+  z-index: 300px;
+
+  width: 200px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 12px 15px;
+
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.profile-picture-container:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.channel-tooltip img {
+  width: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.channel-tooltip-name {
+  font-family: Roboto, Arial;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.channel-tooltip-stats {
+  font-family: Roboto, Arial;
+  white-space: nowrap;
+  color: rgb(96,96,96);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
