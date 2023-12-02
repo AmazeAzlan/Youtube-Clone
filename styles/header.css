@@ -52,6 +52,7 @@
 
 .search-bar:focus {
   box-shadow: none;
+  border: 1px solid blue;
 }
 
 .search-bar::placeholder {
